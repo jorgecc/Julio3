@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Julio3", "Julio3\Julio3.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "html", "html", "{9BC83CA3-E14B-4647-BE6E-FD5C8DA4D477}"
 	ProjectSection(SolutionItems) = preProject
+		html\Categoria.xmind = html\Categoria.xmind
 		html\categorialist.html = html\categorialist.html
 		html\formulario.html = html\formulario.html
 		html\formulariocategoria.html = html\formulariocategoria.html
