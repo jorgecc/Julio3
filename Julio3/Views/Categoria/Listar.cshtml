@@ -1,0 +1,42 @@
+﻿@using Julio3.ef
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Untitled 3</title>
+</head>
+
+<body>
+    <h1>Listado de Categorias</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Categoria cat in ViewBag.categorias) { 
+                <tr>
+                    <td># @cat.CategoriaId</td>
+                    <td>@cat.Nombre</td>
+                    <td><a href="/Categoria/Modificar/@cat.CategoriaId">Editar</a></td>
+                </tr>
+            }
+           
+        </tbody>
+    </table>
+    <br>
+    <a href="/Categoria/Insertar">Insertar Categoria</a>
+
+</body>
+
+</html>

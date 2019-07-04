@@ -1,0 +1,32 @@
+﻿@model Julio3.ef.Categoria
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Insertar Categoria</title>
+</head>
+
+<ul>
+    <li>tag form metodo post</li>
+    <li>objetos deben tener nombre correcto</li>
+    <li>boton de enviar los datos (submit)</li>
+</ul>
+
+<body>
+    <h1>Insertar Categoria</h1>
+    <form method="post">
+        Id Categoria :# @ViewBag.id<br>
+        Nombre:
+        <input type="text" name="Nombre" value="@Model.Nombre" /><br />
+        <hr>
+        <input type="submit" name="boton" value="Enviar" />&nbsp;&nbsp;
+        <input type="submit" name="boton" value="Cancelar" />
+    </form>
+    s
+</body>
+
+</html>
