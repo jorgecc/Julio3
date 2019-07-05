@@ -34,5 +34,21 @@ namespace Julio3.Controllers
 
             return View(modelo);
         }
+        // /Categoria/Modificar/"n"(id)
+        [HttpGet]
+        public ActionResult Modificar(int id)
+        {
+            var modelo = CategoriaDal.Leer(id);
+            return View(modelo);
+        }
+
+        [HttpPost]
+        public ActionResult Modificar(Categoria modelo)
+        {
+            CategoriaDal.Modificar(modelo);
+            Response.Redirect("/Categoria/Listar");
+
+            return View(modelo);
+        }
     }
 }

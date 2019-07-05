@@ -1,0 +1,28 @@
+﻿@model Julio3.ef.Categoria
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Modificar Categoria</title>
+</head>
+
+
+<body>
+    <h1>Modificar Categoria</h1>
+    <form method="post">
+        Id Categoria :# @Model.CategoriaId<br>
+        Nombre:
+        <input type="hidden" name="CategoriaId" value="@Model.CategoriaId" />
+        <input type="text" name="Nombre" value="@Model.Nombre" /><br />
+        <hr>
+        <input type="submit" name="boton" value="Enviar" />&nbsp;&nbsp;
+        <input type="submit" name="boton" value="Cancelar" />
+    </form>
+    s
+</body>
+
+</html>
