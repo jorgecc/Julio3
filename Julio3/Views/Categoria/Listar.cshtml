@@ -21,15 +21,19 @@
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
             @foreach(Categoria cat in ViewBag.categorias) { 
-                <tr>
-                    <td># @cat.CategoriaId</td>
-                    <td>@cat.Nombre</td>
-                    <td><a href="/Categoria/Modificar/@cat.CategoriaId">Editar</a></td>
-                </tr>
+            <tr>
+                <td># @cat.CategoriaId</td>
+                <td>@cat.Nombre</td>
+                <td><a href="/Categoria/Modificar/@cat.CategoriaId">Editar</a></td>
+                <td><a 
+                       onclick="return confirm('Esta seguro?')"
+                       href="/Categoria/Eliminar/@cat.CategoriaId">Eliminar</a></td>
+            </tr>
             }
            
         </tbody>

@@ -50,6 +50,18 @@ namespace Julio3.dal
             }
             return cat;
         } // fin leer
+        public static void Borrar(int categoriaId)
+        {
+            using (var db = new Model1())
+            {
+                var cat = db.Categoria
+                    .FirstOrDefault(c => c.CategoriaId == categoriaId);
+                //db.Database.SqlQuery("delete from categoria where categoryid=?"
+                //    ,categoriaId)
+                db.Categoria.Remove(cat);
+                db.SaveChanges();
+            }
+        }
 
     }
 }

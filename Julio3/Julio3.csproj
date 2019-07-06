@@ -102,6 +102,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
+    <Compile Include="Controllers\LibroController.cs" />
+    <Compile Include="dal\LibroDal.cs" />
     <Compile Include="dal\CategoriaDal.cs" />
     <Compile Include="ef\Categoria.cs" />
     <Compile Include="ef\Libro.cs" />
@@ -117,6 +119,9 @@
     <Content Include="Views\Categoria\Listar.cshtml" />
     <Content Include="Views\Categoria\Insertar.cshtml" />
     <Content Include="Views\Categoria\Modificar.cshtml" />
+    <Content Include="Views\Libro\Listar.cshtml" />
+    <Content Include="Views\Libro\Insertar.cshtml" />
+    <Content Include="Views\Libro\Modificar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

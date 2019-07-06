@@ -50,5 +50,15 @@ namespace Julio3.Controllers
 
             return View(modelo);
         }
+
+        public ActionResult Eliminar(int id)
+        {
+            CategoriaDal.Borrar(id); 
+            Response.Redirect("/Categoria/Listar",true);
+
+            // esto nunca deberia ejecutarse
+            //return View("Listar"); // Ocupa la vista Listar.
+            return null;
+        }
     }
 }

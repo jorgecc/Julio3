@@ -1,0 +1,46 @@
+﻿@using Julio3.ef
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Untitled 2</title>
+</head>
+
+<body>
+
+    <h1>Listado de Libro</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Editar</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach(Libro libro in ViewBag.libros) { 
+            <tr>
+                <td>#@libro.LibroId</td>
+                <td>@libro.Nombre</td>
+                <td>$@libro.Precio</td>
+                <td>@libro.Categoria.Nombre</td>
+                <td><a href="/Libro/Modificar/@libro.LibroId">Editar</a></td>
+            </tr>
+            }
+           
+        </tbody>
+    </table>
+    <br>
+    <a href="productinsertar.html">Insertar Producto</a>
+
+</body>
+
+</html>

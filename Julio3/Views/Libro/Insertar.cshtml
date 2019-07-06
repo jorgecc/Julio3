@@ -1,0 +1,34 @@
+﻿@model Julio3.ef.Libro
+@using Julio3.ef
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Untitled 2</title>
+</head>
+
+<body>
+    <form method="post">
+        Id Libro :# 0000<br>
+        Nombre:
+        <input type="text" name="Nombre" value="@Model.Nombre"  /><br />
+        Precio:<input type="number" name="Precio" value="@Model.Precio"  /><br />
+        Categoria:
+        <select name="CategoriaId">
+            @foreach(Categoria cat in ViewBag.categorias) { 
+                <option value="@cat.CategoriaId">@cat.Nombre</option>
+            }
+           
+        </select>
+        <hr>
+        <input type="submit" name="boton" value="Enviar" />&nbsp;&nbsp;
+        <input type="submit" name="boton" value="Cancelar" />
+    </form>
+    s
+</body>
+
+</html>
